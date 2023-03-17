@@ -31,7 +31,7 @@ for code,list_by_code in store.items():
     total_price = 0
     for i in range(len(list_by_code)):
         total_quantity = total_quantity + list_by_code[i]['quantity']
-        total_price = total_price + list_by_code[i]['price']
+        total_price = total_price + list_by_code[i]['price']*list_by_code[i]['quantity']
         name = list(titles.keys())[list(titles.values()).index(code)]
     print(name,'-', total_quantity,'шт, стоимость', total_price)
 
