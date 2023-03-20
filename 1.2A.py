@@ -32,3 +32,18 @@ if sec >= 0.6:
     sec = sec-(sec//0.6)*0.6
 print ('Три песни звучат', min+sec, 'минут')
 
+# Прям здорово))) Благодарю за такое решение)
+# Мой вариант был такой (с пакетами)
+from datetime import timedelta
+from math import modf
+from random import sample
+
+
+total_time = timedelta()
+
+for song in sample(my_favorite_songs, 3):
+    s, m = modf(song[1])
+    total_time += timedelta(minutes=int(m), seconds=int(s * 100))
+
+print(f'Три песни звучат {total_time} минут')
+
