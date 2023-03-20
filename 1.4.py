@@ -35,3 +35,4 @@ for code,list_by_code in store.items():
         name = list(titles.keys())[list(titles.values()).index(code)]
     print(name,'-', total_quantity,'шт, стоимость', total_price)
 
+# Ну тут все ок
